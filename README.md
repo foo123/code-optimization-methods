@@ -55,7 +55,7 @@ The 90-10 (or 80-20 or other variations) rule of thumb, states that __90 percent
 One optimization technique (eg simplification) can lead to the application of another optimization technique (eg constant substitution) and this in turn can lead back to the further application of the first optimization technique (or others). Doors can open.
 
 
-__References:__ [8], [10], [11]
+__References:__ [8], [10], [11], [35], [36], [37], [38], [39]
 
 
 ###Low-level
@@ -364,6 +364,11 @@ Database Access can be expensive, this means it is usually better to fetch the n
 * http://www.slideshare.net/andreialexandrescu1/three-optimization-tips-for-c-15708507
 * http://floating-point-gui.de/
 * http://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html
+* http://dragonbook.stanford.edu/lecture-notes/Stanford-CS143/20-Optimization.pdf
+* https://cs.brown.edu/courses/cs033/docs/guides/c_optimization_notes.pdf
+* http://www.tantalon.com/pete/cppopt/main.htm
+* http://www.azillionmonkeys.com/qed/optimize.html
+* http://www.ibiblio.org/pub/languages/fortran/ch1-9.html
 
 [1]: http://en.wikipedia.org/wiki/Code_optimization
 [2]: http://en.wikipedia.org/wiki/Don%27t_repeat_yourself
@@ -399,3 +404,8 @@ Database Access can be expensive, this means it is usually better to fetch the n
 [32]: http://www.slideshare.net/andreialexandrescu1/three-optimization-tips-for-c-15708507
 [33]: http://floating-point-gui.de/
 [34]: http://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html
+[35]: http://dragonbook.stanford.edu/lecture-notes/Stanford-CS143/20-Optimization.pdf
+[36]: https://cs.brown.edu/courses/cs033/docs/guides/c_optimization_notes.pdf
+[37]: http://www.tantalon.com/pete/cppopt/main.htm
+[38]: http://www.azillionmonkeys.com/qed/optimize.html
+[39]: http://www.ibiblio.org/pub/languages/fortran/ch1-9.html
