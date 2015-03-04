@@ -61,7 +61,7 @@ __References:__ [8], [10], [11]
 ###Low-level
 
 
-####Generalities
+####Generalities<sup> [33], [34] </sup>
 
 __Data Allocation__
 
@@ -88,6 +88,7 @@ __Arithmetic Operations__
 * Addition/Subtraction is faster than multiplication
 * Bitwise operations are fastest
 
+Example reference: [What Every Programmer Should Know About Floating-Point Arithmetic](http://floating-point-gui.de/)
 
 ####Methods
 
@@ -362,6 +363,8 @@ Database Access can be expensive, this means it is usually better to fetch the n
 * http://en.wikipedia.org/wiki/Template_engine
 * https://www.facebook.com/notes/facebook-engineering/three-optimization-tips-for-c/10151361643253920
 * http://www.slideshare.net/andreialexandrescu1/three-optimization-tips-for-c-15708507
+* http://floating-point-gui.de/
+* http://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html
 
 [1]: http://en.wikipedia.org/wiki/Code_optimization
 [2]: http://en.wikipedia.org/wiki/Don%27t_repeat_yourself
@@ -395,3 +398,5 @@ Database Access can be expensive, this means it is usually better to fetch the n
 [30]: http://homepages.math.uic.edu/~leon/cs-mcs401-f07/handouts/fastexp.pdf
 [31]: https://www.facebook.com/notes/facebook-engineering/three-optimization-tips-for-c/10151361643253920
 [32]: http://www.slideshare.net/andreialexandrescu1/three-optimization-tips-for-c-15708507
+[33]: http://floating-point-gui.de/
+[34]: http://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html
