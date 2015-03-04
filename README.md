@@ -88,7 +88,6 @@ __Arithmetic Operations__
 * Addition/Subtraction is faster than multiplication
 * Bitwise operations are fastest
 
-Example reference: [What Every Programmer Should Know About Floating-Point Arithmetic](http://floating-point-gui.de/)
 
 ####Methods
 
