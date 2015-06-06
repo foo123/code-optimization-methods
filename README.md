@@ -105,7 +105,7 @@ __Arithmetic Operations__
 ###Language-independent optimization
 
 
-* __Re-arranging Expressions__ : More efficient code for the evaluation of an expression can often be produced if the operations occuring in the expression are evaluated in a different order. Classic examples are Horner's Rule <sup> [12] </sup>,  Karatsuba Multiplication <sup> [13] </sup>,  fast complex multiplication <sup> [14] </sup>, fast matrix multiplication <sup> [15],  [16] </sup>,  fast exponentiation <sup> [29],  [30] </sup>.
+* __Re-arranging Expressions__ : More efficient code for the evaluation of an expression can often be produced if the operations occuring in the expression are evaluated in a different order. Classic examples are Horner's Rule <sup> [12] </sup>,  Karatsuba Multiplication <sup> [13] </sup>,  fast complex multiplication <sup> [14] </sup>, fast matrix multiplication <sup> [15],  [16] </sup>,  fast exponentiation <sup> [29],  [30] </sup>, fast factorials/binomials <sup> [40], [41] </sup>.
 
 
 * __Constant Substitution/Propagation__ : Many times an expression is under all cases evaluated to a single constant, the constant value can be replaced instead of the more complex and slower expression (sometimes compilers do that).
@@ -369,6 +369,8 @@ Database Access can be expensive, this means it is usually better to fetch the n
 * http://www.tantalon.com/pete/cppopt/main.htm
 * http://www.azillionmonkeys.com/qed/optimize.html
 * http://www.ibiblio.org/pub/languages/fortran/ch1-9.html
+* http://www.cs.berkeley.edu/~fateman/papers/factorial.pdf
+* https://github.com/PeterLuschny/Fast-Factorial-Functions
 
 [1]: http://en.wikipedia.org/wiki/Code_optimization
 [2]: http://en.wikipedia.org/wiki/Don%27t_repeat_yourself
@@ -409,3 +411,5 @@ Database Access can be expensive, this means it is usually better to fetch the n
 [37]: http://www.tantalon.com/pete/cppopt/main.htm
 [38]: http://www.azillionmonkeys.com/qed/optimize.html
 [39]: http://www.ibiblio.org/pub/languages/fortran/ch1-9.html
+[40]: http://www.cs.berkeley.edu/~fateman/papers/factorial.pdf
+[41]: https://github.com/PeterLuschny/Fast-Factorial-Functions
