@@ -105,7 +105,7 @@ __Arithmetic Operations__
 ###Language-independent optimization
 
 
-* __Re-arranging Expressions__ : More efficient code for the evaluation of an expression can often be produced if the operations occuring in the expression are evaluated in a different order. Classic examples are Horner's Rule <sup> [12] </sup>,  Karatsuba Multiplication <sup> [13] </sup>,  fast complex multiplication <sup> [14] </sup>, fast matrix multiplication <sup> [15],  [16] </sup>,  fast exponentiation <sup> [29],  [30] </sup>, fast factorials/binomials <sup> [40], [41] </sup>.
+* __Re-arranging Expressions__ : More efficient code for the evaluation of an expression (or the computation of a process) can often be produced if the operations occuring in the expression are evaluated in a different order. Classic examples are Horner's Rule <sup> [12] </sup>,  Karatsuba Multiplication <sup> [13] </sup>,  fast complex multiplication <sup> [14] </sup>, fast matrix multiplication <sup> [15],  [16] </sup>,  fast exponentiation <sup> [29],  [30] </sup>, fast factorials/binomials <sup> [40], [41] </sup>, fast fourier transform <sup> [53] </sup>, sorting by merging <sup> [51] </sup>, sorting by powers <sup> [52] </sup>.
 
 
 * __Constant Substitution/Propagation__ : Many times an expression is under all cases evaluated to a single constant, the constant value can be replaced instead of the more complex and slower expression (sometimes compilers do that).
@@ -132,7 +132,7 @@ __Arithmetic Operations__
 * __Handling Trivial/Special Cases__ : Sometimes a complex computation has some trivial or special cases which can be handled much more efficiently by a reduced/simplified version of the computation (eg computing a^b, can handle the special cases for a,b=0,1,2 by a simpler method). Trivial cases occur with some frequency in applications, so simplified special case code can be quite useful.  <sup> [31], [32] </sup> . Similar to this, is the handling of common/frequent computations (depending on application) with fine-tuned or faster code.
 
 
-* __Exploiting Mathematical Theorems/Relations__ : Some times a computation can be performed in an equivalent but more efficient way by using some mathematical theorem, transformation, symmetry <sup> [50] </sup> or knowledge (eg. Gauss method of solving Systems of Linear equations, Fast Fourier Transforms, Fermat's Little Theorem,  Taylor-Mclaurin Series Expasions, Trigonometric Identities, etc..). This can go a long way. It is good to refresh your mathematical knowledge every now and then.
+* __Exploiting Mathematical Theorems/Relations__ : Some times a computation can be performed in an equivalent but more efficient way by using some mathematical theorem, transformation, symmetry <sup> [50] </sup> or knowledge (eg. Gauss method of solving Systems of Linear equations <sup> [54] </sup>, Fast Fourier Transforms <sup> [53] </sup>, Fermat's Little Theorem <sup> [55] </sup>,  Taylor-Mclaurin Series Expasions, Trigonometric Identities <sup> [56] </sup>, etc..). This can go a long way. It is good to refresh your mathematical knowledge every now and then.
 
 * __Using Efficient Data Structures__ : Data structures are the counterpart of algorithms (in the space domain), each efficient algorithm needs an associated efficient data structure for the specific task. In many cases using an appropriate data structure (representation) can make all the difference (eg. database designers and search engine developers know this very well) <sup> [27], [28], [49] </sup> 
 
@@ -227,7 +227,7 @@ else
 ```
 
 
-* __Array Linearization__ : This involves handling a multi-dimensional array in a loop, as if it was a (simpler) one-dimensional array. Most times multi-dimensional arrays (eg 2D arrays NxM) use a linearization scheme, when stored in memory. Same scheme can be used to access the array data as if it is one big 1-dimensional array. This results in using a single loop instead of multiple nested loops <sup> [21], [22] </sup> 
+* __Array Linearization__ : This involves handling a multi-dimensional array in a loop, as if it was a (simpler) one-dimensional array. Most times multi-dimensional arrays (eg 2D arrays NxM) use a linearization scheme, when stored in memory. Same scheme can be used to access the array data as if it is one big 1-dimensional array. This results in using a single loop instead of multiple nested loops <sup> [21], [22], [57] </sup> 
 
 __example:__
 
@@ -236,9 +236,9 @@ __example:__
 // nested loop
 // N = M = 20
 // total size = NxM = 400
-for (i=0; i<20; i++)
+for (i=0; i<20; i+=1)
 {
-    for (j=0; j<20; j++)
+    for (j=0; j<20; j+=1)
     {
         // usually a[i, j] means a[i + j*N] or some other equivalent indexing scheme, 
         // in most cases linearization is straight-forward
@@ -380,6 +380,13 @@ Database Access can be expensive, this means it is usually better to fetch the n
 * https://en.wikipedia.org/wiki/Isomorphism
 * https://en.wikipedia.org/wiki/Representation_(mathematics)
 * https://en.wikipedia.org/wiki/Symmetry
+* https://en.wikipedia.org/wiki/Merge_sort
+* https://en.wikipedia.org/wiki/Radix_sort
+* https://en.wikipedia.org/wiki/Fast_Fourier_transform
+* https://en.wikipedia.org/wiki/Gaussian_elimination
+* https://en.wikipedia.org/wiki/Fermat%27s_little_theorem
+* https://en.wikipedia.org/wiki/Trigonometric_identities
+* http://arxiv.org/abs/1102.1523v1
 
 [1]: http://en.wikipedia.org/wiki/Code_optimization
 [2]: http://en.wikipedia.org/wiki/Don%27t_repeat_yourself
@@ -431,3 +438,10 @@ Database Access can be expensive, this means it is usually better to fetch the n
 [48]: https://en.wikipedia.org/wiki/Isomorphism
 [49]: https://en.wikipedia.org/wiki/Representation_(mathematics)
 [50]: https://en.wikipedia.org/wiki/Symmetry
+[51]: https://en.wikipedia.org/wiki/Merge_sort
+[52]: https://en.wikipedia.org/wiki/Radix_sort
+[53]: https://en.wikipedia.org/wiki/Fast_Fourier_transform
+[54]: https://en.wikipedia.org/wiki/Gaussian_elimination
+[55]: https://en.wikipedia.org/wiki/Fermat%27s_little_theorem
+[56]: https://en.wikipedia.org/wiki/Trigonometric_identities
+[57]: http://arxiv.org/abs/1102.1523v1
