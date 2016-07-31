@@ -27,15 +27,15 @@ Systems that operate in Real-Time are examples where both factors can be critica
 
 * __Keep it DRY and Cache__ : The general concept of caching involves avoiding re-computation/re-loading of a result if not necessary. This can be seen as a variation of Dont Repeat Yourself principle <sup> [2] </sup> . Even dynamic programming can be seen as a variation of caching, in the sense that it stores intermediate results saving re-computation time and resources.
 
-* __KISS it, simpler can be faster__  :  Keep it simple <sup> [3] </sup> , makes various other techniques easier to apply and modify. ( A plethora of Software Engineering methods can help in this <sup> [25], [26] </sup>  )
+* __KISS it, simpler can be faster__  :  Keep it simple <sup> [3] </sup> , makes various other techniques easier to apply and modify. ( A plethora of Software Engineering methods can help in this <sup> [25], [26], [46], [47] </sup>  )
 
-* __Sosi ample free orginizd, So simple if re-organized__ : Dont hesitate to re-organize if needed. Many times sth can be re-organized, re-structured in a much simpler / faster way while retaining its original functionality (concept of isomorphism). For example, the expression (10+5*2)^2 is the simple constant 400, another example is the transformation from infix expression notation to prefix (Polish) notation which can be evaluated faster in one pass.
+* __Sosi ample free orginizd, So simple if re-organized__ : Dont hesitate to re-organize if needed. Many times sth can be re-organized, re-structured in a much simpler / faster way while retaining its original functionality (concept of isomorphism <sup> [48] </sup> , change of representation <sup> [49], [50], [27] </sup>), yet providing other advantages. For example, the expression (10+5*2)^2 is the simple constant 400, another example is the transformation from infix expression notation to prefix (Polish) notation which can be evaluated faster in one pass.
 
-* __Divide into subproblems and Conquer the solution__ : Subproblems can be easier/faster to solve and combine for the global solution. Sorting algorithms are great examples of that <sup> [4] </sup> , [Sorting Algorithms in JavaScript](https://github.com/foo123/SortingAlgorithms)
+* __Divide into subproblems and Conquer the solution__ : Subproblems (or smaller, trivial, special cases) can be easier/faster to solve and combine for the global solution. Sorting algorithms are great examples of that <sup> [4], [Sorting Algorithms in JavaScript](https://github.com/foo123/SortingAlgorithms) </sup>
 
-* __More helping hands are always welcome__ : Spread the work load, subdivide, share, parallelize if possible <sup> [5] </sup> .
+* __More helping hands are always welcome__ : Spread the work load, subdivide, share, parallelize if possible <sup> [5], [45] </sup> .
 
-* __United we Stand and Deliver__ : Having data together in a contiguous chunk, instead of scattered around here and there, makes it faster to load and process as a single block, instead of accessing many smaller chunks (eg. vector/pipeline machines, database queries).
+* __United we Stand and Deliver__ : Having data together in a contiguous chunk, instead of scattered around here and there, makes it faster to load and process as a single block, instead of (fetching and) accessing many smaller chunks (eg. cache memory, vector/pipeline machines, database queries) <sup> [42], [43], [44] </sup>.
 
 * __A little Laziness never hurt anyone__ : So true, each time a program is executed, only some of its data and functionality are used. Delaying to load and initialize (being lazy) all the data and functionality untill needed, can go a long way <sup> [6] </sup> .
 
@@ -132,9 +132,9 @@ __Arithmetic Operations__
 * __Handling Trivial/Special Cases__ : Sometimes a complex computation has some trivial or special cases which can be handled much more efficiently by a reduced/simplified version of the computation (eg computing a^b, can handle the special cases for a,b=0,1,2 by a simpler method). Trivial cases occur with some frequency in applications, so simplified special case code can be quite useful.  <sup> [31], [32] </sup> . Similar to this, is the handling of common/frequent computations (depending on application) with fine-tuned or faster code.
 
 
-* __Exploiting Mathematical Theorems/Relations__ : Some times a computation can be performed in an equivalent but more efficient way by using some mathematical theorem, transformation or knowledge (eg. Gauss method of solving Systems of Linear equations, Fast Fourier Transforms, Fermat's Little Theorem,  Taylor-Mclaurin Series Expasions, Trigonometric Identities, etc..). This can go a long way. It is good to refresh your mathematical knowledge every now and then.
+* __Exploiting Mathematical Theorems/Relations__ : Some times a computation can be performed in an equivalent but more efficient way by using some mathematical theorem, transformation, symmetry <sup> [50] </sup> or knowledge (eg. Gauss method of solving Systems of Linear equations, Fast Fourier Transforms, Fermat's Little Theorem,  Taylor-Mclaurin Series Expasions, Trigonometric Identities, etc..). This can go a long way. It is good to refresh your mathematical knowledge every now and then.
 
-* __Using Efficient Data Structures__ : Data structures are the counterpart of algorithms (in the space domain), each efficient algorithm needs an associated efficient data structure for the specific task. In many cases using an appropriate data structure can make all the difference (eg. database designers and search engine developers know this very well) <sup> [27], [28] </sup> 
+* __Using Efficient Data Structures__ : Data structures are the counterpart of algorithms (in the space domain), each efficient algorithm needs an associated efficient data structure for the specific task. In many cases using an appropriate data structure (representation) can make all the difference (eg. database designers and search engine developers know this very well) <sup> [27], [28], [49] </sup> 
 
 
 
@@ -371,6 +371,15 @@ Database Access can be expensive, this means it is usually better to fetch the n
 * http://www.ibiblio.org/pub/languages/fortran/ch1-9.html
 * http://www.cs.berkeley.edu/~fateman/papers/factorial.pdf
 * https://github.com/PeterLuschny/Fast-Factorial-Functions
+* https://en.wikipedia.org/wiki/Locality_of_reference
+* https://en.wikipedia.org/wiki/Memory_access_pattern
+* https://en.wikipedia.org/wiki/Memory_hierarchy
+* https://en.wikipedia.org/wiki/Heterogeneous_computing
+* https://en.wikipedia.org/wiki/Stream_processing
+* https://en.wikipedia.org/wiki/Dataflow_programming
+* https://en.wikipedia.org/wiki/Isomorphism
+* https://en.wikipedia.org/wiki/Representation_(mathematics)
+* https://en.wikipedia.org/wiki/Symmetry
 
 [1]: http://en.wikipedia.org/wiki/Code_optimization
 [2]: http://en.wikipedia.org/wiki/Don%27t_repeat_yourself
@@ -413,3 +422,12 @@ Database Access can be expensive, this means it is usually better to fetch the n
 [39]: http://www.ibiblio.org/pub/languages/fortran/ch1-9.html
 [40]: http://www.cs.berkeley.edu/~fateman/papers/factorial.pdf
 [41]: https://github.com/PeterLuschny/Fast-Factorial-Functions
+[42]: https://en.wikipedia.org/wiki/Locality_of_reference
+[43]: https://en.wikipedia.org/wiki/Memory_access_pattern
+[44]: https://en.wikipedia.org/wiki/Memory_hierarchy
+[45]: https://en.wikipedia.org/wiki/Heterogeneous_computing
+[46]: https://en.wikipedia.org/wiki/Stream_processing
+[47]: https://en.wikipedia.org/wiki/Dataflow_programming
+[48]: https://en.wikipedia.org/wiki/Isomorphism
+[49]: https://en.wikipedia.org/wiki/Representation_(mathematics)
+[50]: https://en.wikipedia.org/wiki/Symmetry
