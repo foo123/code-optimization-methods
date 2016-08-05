@@ -7,6 +7,7 @@
 
 * [General Principles](#general-principles)
 * [Low-level](#low-level)
+* [Language-dependent optimization](#language-dependent-optimization)
 * [Language-independent optimization](#language-independent-optimization)
 * [Databases](#databases)
 * [Web](#web)
@@ -99,6 +100,11 @@ __Arithmetic Operations__
 
 
 * __Optimizations over a group of Atoms__ : Similar to previous, this kind of optimization, involves examining the control flow over a group of cpu instructions and re-arranging so that the functionality is retained, while using simpler/fewer instructions. For example a complex IF THEN logic, depending on parameters, can be simplified to a single Jump statement, and so on.
+
+
+###Language-dependent optimization
+
+* Check carefuly the **documentation and manual** for the underlying mechanisms the language is using to implement specific features and operations and use them to estimate the cost of a certain code and the alternatives provided.
 
 
 
