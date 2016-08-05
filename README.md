@@ -135,7 +135,7 @@ __Arithmetic Operations__
 * __Exploiting Mathematical Theorems/Relations__ : Some times a computation can be performed in an equivalent but more efficient way by using some mathematical theorem, transformation, symmetry <sup> [50] </sup> or knowledge (eg. Gauss method of solving Systems of Linear equations <sup> [54] </sup>, Fast Fourier Transforms <sup> [53] </sup>, Fermat's Little Theorem <sup> [55] </sup>,  Taylor-Mclaurin Series Expasions, Trigonometric Identities <sup> [56] </sup>, etc..). This can go a long way. It is good to refresh your mathematical knowledge every now and then.
 
 
-* __Using Efficient Data Structures__ : Data structures are the counterpart of algorithms (in the space domain), each efficient algorithm needs an associated efficient data structure for the specific task. In many cases using an appropriate data structure (representation) can make all the difference (eg. database designers and search engine developers know this very well) <sup> [27], [28], [49], [58], [59], [60] </sup> 
+* __Using Efficient Data Structures__ : Data structures are the counterpart of algorithms (in the space domain), each efficient algorithm needs an associated efficient data structure for the specific task. In many cases using an appropriate data structure (representation) can make all the difference (eg. database designers and search engine developers know this very well) <sup> [27], [28], [49], [58], [59], [60], [61] </sup> 
 
 
 
@@ -391,6 +391,7 @@ Database Access can be expensive, this means it is usually better to fetch the n
 * https://arxiv.org/abs/cs/0011047
 * http://soft.vub.ac.be/~madewael/w-JITds/paper.pdf
 * http://brandonlucia.com/pubs/approx2014.pdf
+* http://www.cs.le.ac.uk/ac/LACFunding/LACNewParDS/finalreport.pdf
 
 [1]: http://en.wikipedia.org/wiki/Code_optimization
 [2]: http://en.wikipedia.org/wiki/Don%27t_repeat_yourself
@@ -452,3 +453,4 @@ Database Access can be expensive, this means it is usually better to fetch the n
 [58]: https://arxiv.org/abs/cs/0011047
 [59]: http://soft.vub.ac.be/~madewael/w-JITds/paper.pdf
 [60]: http://brandonlucia.com/pubs/approx2014.pdf
+[61]: http://www.cs.le.ac.uk/ac/LACFunding/LACNewParDS/finalreport.pdf
