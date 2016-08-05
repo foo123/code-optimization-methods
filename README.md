@@ -298,7 +298,7 @@ Database Access can be expensive, this means it is usually better to fetch the n
 * __Caching__ : Re-using previous fetched data-results for same query, if not critical and if a slight-delayed update is tolerable
 
 
-* __Using Efficient Queries__ : For Relational DBs, the most efficient query is by using an index (or a set of indexes) by which data are uniquely indexed in the DB.  
+* __Using Efficient Queries__ : For Relational DBs, the most efficient query is by using an index (or a set of indexes) by which data are uniquely indexed in the DB <sup> [62], [63] </sup>.  
 
 
 * __Exploiting Redundancy__ : Adding more helping hands(DBs) to handle the load instead of just one. In effect this means copying (creating redundancy) of data in multiple places, which can subdivide the total load and handle it independantly
@@ -392,6 +392,8 @@ Database Access can be expensive, this means it is usually better to fetch the n
 * http://soft.vub.ac.be/~madewael/w-JITds/paper.pdf
 * http://brandonlucia.com/pubs/approx2014.pdf
 * http://www.cs.le.ac.uk/ac/LACFunding/LACNewParDS/finalreport.pdf
+* http://20bits.com/article/10-tips-for-optimizing-mysql-queries-that-dont-suck
+* https://www.percona.com/blog/
 
 [1]: http://en.wikipedia.org/wiki/Code_optimization
 [2]: http://en.wikipedia.org/wiki/Don%27t_repeat_yourself
@@ -454,3 +456,5 @@ Database Access can be expensive, this means it is usually better to fetch the n
 [59]: http://soft.vub.ac.be/~madewael/w-JITds/paper.pdf
 [60]: http://brandonlucia.com/pubs/approx2014.pdf
 [61]: http://www.cs.le.ac.uk/ac/LACFunding/LACNewParDS/finalreport.pdf
+[62]: http://20bits.com/article/10-tips-for-optimizing-mysql-queries-that-dont-suck
+[63]: https://www.percona.com/blog/
