@@ -105,7 +105,7 @@ __Arithmetic Operations__
 ###Language-independent optimization
 
 
-* __Re-arranging Expressions__ : More efficient code for the evaluation of an expression (or the computation of a process) can often be produced if the operations occuring in the expression are evaluated in a different order. This works because by re-arranging expression/operations what gets added or multiplied to what gets changed, including the relative number of additions and multiplications, and thus the relative (computational) costs of each operation. In fact, this is not restricted to arithmetic operations, but any operations whatsoever using symmetries of the process/operators and re-arrange to produce same result while having other advantages. That is it, so simple. Classic examples are Horner's Rule <sup> [12] </sup>,  Karatsuba Multiplication <sup> [13] </sup>,  fast complex multiplication <sup> [14] </sup>, fast matrix multiplication <sup> [15],  [16] </sup>,  fast exponentiation <sup> [29],  [30] </sup>, fast factorials/binomials <sup> [40], [41] </sup>, fast fourier transform <sup> [53] </sup>, sorting by merging <sup> [51] </sup>, sorting by powers <sup> [52] </sup>.
+* __Re-arranging Expressions__ : More efficient code for the evaluation of an expression (or the computation of a process) can often be produced if the operations occuring in the expression are evaluated in a different order. This works because by re-arranging expression/operations, what gets added or multiplied to what, gets changed, including the relative number of additions and multiplications, and thus the (overall) relative (computational) costs of each operation. In fact, this is not restricted to arithmetic operations, but any operations whatsoever using symmetries of the process/operators and re-arrange to produce same result while having other advantages. That is it, so simple. Classic examples are Horner's Rule <sup> [12] </sup>,  Karatsuba Multiplication <sup> [13] </sup>,  fast complex multiplication <sup> [14] </sup>, fast matrix multiplication <sup> [15],  [16] </sup>,  fast exponentiation <sup> [29],  [30] </sup>, fast factorials/binomials <sup> [40], [41] </sup>, fast fourier transform <sup> [53] </sup>, sorting by merging <sup> [51] </sup>, sorting by powers <sup> [52] </sup>.
 
 
 * __Constant Substitution/Propagation__ : Many times an expression is under all cases evaluated to a single constant, the constant value can be replaced instead of the more complex and slower expression (sometimes compilers do that).
@@ -134,7 +134,8 @@ __Arithmetic Operations__
 
 * __Exploiting Mathematical Theorems/Relations__ : Some times a computation can be performed in an equivalent but more efficient way by using some mathematical theorem, transformation, symmetry <sup> [50] </sup> or knowledge (eg. Gauss method of solving Systems of Linear equations <sup> [54] </sup>, Fast Fourier Transforms <sup> [53] </sup>, Fermat's Little Theorem <sup> [55] </sup>,  Taylor-Mclaurin Series Expasions, Trigonometric Identities <sup> [56] </sup>, etc..). This can go a long way. It is good to refresh your mathematical knowledge every now and then.
 
-* __Using Efficient Data Structures__ : Data structures are the counterpart of algorithms (in the space domain), each efficient algorithm needs an associated efficient data structure for the specific task. In many cases using an appropriate data structure (representation) can make all the difference (eg. database designers and search engine developers know this very well) <sup> [27], [28], [49], [58] </sup> 
+
+* __Using Efficient Data Structures__ : Data structures are the counterpart of algorithms (in the space domain), each efficient algorithm needs an associated efficient data structure for the specific task. In many cases using an appropriate data structure (representation) can make all the difference (eg. database designers and search engine developers know this very well) <sup> [27], [28], [49], [58], [59], [60] </sup> 
 
 
 
@@ -388,6 +389,8 @@ Database Access can be expensive, this means it is usually better to fetch the n
 * https://en.wikipedia.org/wiki/Trigonometric_identities
 * http://arxiv.org/abs/1102.1523v1
 * https://arxiv.org/abs/cs/0011047
+* http://soft.vub.ac.be/~madewael/w-JITds/paper.pdf
+* http://brandonlucia.com/pubs/approx2014.pdf
 
 [1]: http://en.wikipedia.org/wiki/Code_optimization
 [2]: http://en.wikipedia.org/wiki/Don%27t_repeat_yourself
@@ -447,3 +450,5 @@ Database Access can be expensive, this means it is usually better to fetch the n
 [56]: https://en.wikipedia.org/wiki/Trigonometric_identities
 [57]: http://arxiv.org/abs/1102.1523v1
 [58]: https://arxiv.org/abs/cs/0011047
+[59]: http://soft.vub.ac.be/~madewael/w-JITds/paper.pdf
+[60]: http://brandonlucia.com/pubs/approx2014.pdf
