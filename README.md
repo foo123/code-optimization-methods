@@ -134,7 +134,7 @@ __Arithmetic Operations__
 
 * __Exploiting Mathematical Theorems/Relations__ : Some times a computation can be performed in an equivalent but more efficient way by using some mathematical theorem, transformation, symmetry <sup> [50] </sup> or knowledge (eg. Gauss method of solving Systems of Linear equations <sup> [54] </sup>, Fast Fourier Transforms <sup> [53] </sup>, Fermat's Little Theorem <sup> [55] </sup>,  Taylor-Mclaurin Series Expasions, Trigonometric Identities <sup> [56] </sup>, etc..). This can go a long way. It is good to refresh your mathematical knowledge every now and then.
 
-* __Using Efficient Data Structures__ : Data structures are the counterpart of algorithms (in the space domain), each efficient algorithm needs an associated efficient data structure for the specific task. In many cases using an appropriate data structure (representation) can make all the difference (eg. database designers and search engine developers know this very well) <sup> [27], [28], [49] </sup> 
+* __Using Efficient Data Structures__ : Data structures are the counterpart of algorithms (in the space domain), each efficient algorithm needs an associated efficient data structure for the specific task. In many cases using an appropriate data structure (representation) can make all the difference (eg. database designers and search engine developers know this very well) <sup> [27], [28], [49], [58] </sup> 
 
 
 
@@ -387,6 +387,7 @@ Database Access can be expensive, this means it is usually better to fetch the n
 * https://en.wikipedia.org/wiki/Fermat%27s_little_theorem
 * https://en.wikipedia.org/wiki/Trigonometric_identities
 * http://arxiv.org/abs/1102.1523v1
+* https://arxiv.org/abs/cs/0011047
 
 [1]: http://en.wikipedia.org/wiki/Code_optimization
 [2]: http://en.wikipedia.org/wiki/Don%27t_repeat_yourself
@@ -445,3 +446,4 @@ Database Access can be expensive, this means it is usually better to fetch the n
 [55]: https://en.wikipedia.org/wiki/Fermat%27s_little_theorem
 [56]: https://en.wikipedia.org/wiki/Trigonometric_identities
 [57]: http://arxiv.org/abs/1102.1523v1
+[58]: https://arxiv.org/abs/cs/0011047
