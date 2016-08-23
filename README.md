@@ -34,7 +34,7 @@ Systems that operate in Real-Time are examples where both factors can be critica
 
 * __Divide into subproblems and Conquer the solution__ : Subproblems (or smaller, trivial, special cases) can be easier/faster to solve and combine for the global solution. Sorting algorithms are great examples of that <sup> [4], [Sorting Algorithms in JavaScript](https://github.com/foo123/SortingAlgorithms) </sup>
 
-* __More helping hands are always welcome__ : Spread the work load, subdivide, share, parallelize if possible <sup> [5], [45] </sup> .
+* __More helping hands are always welcome__ : Spread the work load, subdivide, share, parallelize if possible <sup> [5], [45], [64], [65], [66] </sup> .
 
 * __United we Stand and Deliver__ : Having data together in a contiguous chunk, instead of scattered around here and there, makes it faster to load and process as a single block, instead of (fetching and) accessing many smaller chunks (eg. cache memory, vector/pipeline machines, database queries) <sup> [42], [43], [44] </sup>.
 
@@ -141,7 +141,7 @@ __Arithmetic Operations__
 * __Exploiting Mathematical Theorems/Relations__ : Some times a computation can be performed in an equivalent but more efficient way by using some mathematical theorem, transformation, symmetry <sup> [50] </sup> or knowledge (eg. Gauss method of solving Systems of Linear equations <sup> [54] </sup>, Fast Fourier Transforms <sup> [53] </sup>, Fermat's Little Theorem <sup> [55] </sup>,  Taylor-Mclaurin Series Expasions, Trigonometric Identities <sup> [56] </sup>, etc..). This can go a long way. It is good to refresh your mathematical knowledge every now and then.
 
 
-* __Using Efficient Data Structures__ : Data structures are the counterpart of algorithms (in the space domain), each efficient algorithm needs an associated efficient data structure for the specific task. In many cases using an appropriate data structure (representation) can make all the difference (eg. database designers and search engine developers know this very well) <sup> [27], [28], [49], [58], [59], [60], [61] </sup> 
+* __Using Efficient Data Structures__ : Data structures are the counterpart of algorithms (in the space domain), each efficient algorithm needs an associated efficient data structure for the specific task. In many cases using an appropriate data structure (representation) can make all the difference (eg. database designers and search engine developers know this very well) <sup> [27], [28], [49], [58], [59], [60], [61], [64], [65], [66] </sup> 
 
 
 
@@ -400,6 +400,9 @@ Database Access can be expensive, this means it is usually better to fetch the n
 * http://www.cs.le.ac.uk/ac/LACFunding/LACNewParDS/finalreport.pdf
 * http://20bits.com/article/10-tips-for-optimizing-mysql-queries-that-dont-suck
 * https://www.percona.com/blog/
+* http://www.cs.technion.ac.il/~erez/Papers/wf-simulation-ppopp14.pdf
+* http://www.cs.uoi.gr/tech_reports/publications/TR2011-01.pdf
+* http://www.cs.technion.ac.il/~erez/Papers/wf-methodology-ppopp12.pdf
 
 [1]: http://en.wikipedia.org/wiki/Code_optimization
 [2]: http://en.wikipedia.org/wiki/Don%27t_repeat_yourself
@@ -464,3 +467,6 @@ Database Access can be expensive, this means it is usually better to fetch the n
 [61]: http://www.cs.le.ac.uk/ac/LACFunding/LACNewParDS/finalreport.pdf
 [62]: http://20bits.com/article/10-tips-for-optimizing-mysql-queries-that-dont-suck
 [63]: https://www.percona.com/blog/
+[64]: http://www.cs.technion.ac.il/~erez/Papers/wf-simulation-ppopp14.pdf
+[65]: http://www.cs.uoi.gr/tech_reports/publications/TR2011-01.pdf
+[66]: http://www.cs.technion.ac.il/~erez/Papers/wf-methodology-ppopp12.pdf
