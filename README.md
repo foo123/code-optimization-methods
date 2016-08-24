@@ -47,6 +47,8 @@ Before trying to optimize, one has to measure and identify what needs to be opti
 
 That being said, one should always try to optimize and produce efficient solutions. A non-efficient "solution" can be as good as no solution at all, if not worse.
 
+**Pre-optimisation is perfectly valid given pre-knowledge**. For example that instantiating a whole class or array is slower than just returning an integer with the appropriate information.
+
 Some of the optimization techniques can be automated (eg in compilers), while others are better handled manually. 
 
 Some times there is a trade-off between space/time resources. Increasing speed might result in increasing space/memory requirements (__caching__ is a classic example of that). 
