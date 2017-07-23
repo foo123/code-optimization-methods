@@ -1,9 +1,9 @@
-##Code Optimization Methods
+## Code Optimization Methods
 
 *A summary of various code optimization methods*
 
 
-###Contents
+### Contents
 
 * [General Principles](#general-principles)
 * [Low-level](#low-level)
@@ -23,7 +23,7 @@ Computational complexity theory, studies the performance with respect to input d
 Systems that operate in Real-Time are examples where both factors can be critical (eg. [Real-time Image Processing in JavaScript](https://github.com/foo123/FILTER.js) , yeah i know i am the author :) ).
 
 
-###General Principles
+### General Principles
 
 
 * __Keep it `DRY` and Cache__ : The general concept of caching involves avoiding re-computation/re-loading of a result if not necessary. This can be seen as a variation of Dont Repeat Yourself principle <sup> [3](#r3) </sup> . Even dynamic programming can be seen as a variation of caching, in the sense that it stores intermediate results saving re-computation time and resources.
@@ -61,10 +61,10 @@ One optimization technique (eg simplification) can lead to the application of an
 __References:__ [9](#r9), [11](#r11), [12](#r12), [46](#r46), [47](#r47), [48](#r48), [49](#r49), [50](#r50)
 
 
-###Low-level
+### Low-level
 
 
-####Generalities<sup> [44](#r44), [45](#r45) </sup>
+#### Generalities<sup> [44](#r44), [45](#r45) </sup>
 
 __Data Allocation__
 
@@ -92,7 +92,7 @@ __Arithmetic Operations__
 * Bitwise operations are fastest
 
 
-####Methods
+#### Methods
 
 
 * __Register allocation__ : Since register memory is fastest way to access heavily used data, it is desirable (eg compilers, real-time systems) to allocate some data in an optimum sense in the cpu registers during a heavy-load operation. There are various algorithms (based on the graph coloring problem) which provide an automated way for this kind of optimization. Other times a programmer can explicitly declare a variable that is allocated in the cpu registers during some part of an operation <sup> [10](#r10) </sup> 
@@ -104,13 +104,13 @@ __Arithmetic Operations__
 * __Optimizations over a group of Atoms__ : Similar to previous, this kind of optimization, involves examining the control flow over a group of cpu instructions and re-arranging so that the functionality is retained, while using simpler/fewer instructions. For example a complex `IF THEN` logic, depending on parameters, can be simplified to a single `Jump` statement, and so on.
 
 
-###Language-dependent optimization
+### Language-dependent optimization
 
 * Check carefuly the **documentation and manual** for the underlying mechanisms the language is using to implement specific features and operations and use them to estimate the cost of a certain code and the alternatives provided.
 
 
 
-###Language-independent optimization
+### Language-independent optimization
 
 
 * __Re-arranging Expressions__ : More efficient code for the evaluation of an expression (or the computation of a process) can often be produced if the operations occuring in the expression are evaluated in a different order. This works because by re-arranging expression/operations, what gets added or multiplied to what, gets changed, including the relative number of additions and multiplications, and thus the (overall) relative (computational) costs of each operation. In fact, this is not restricted to arithmetic operations, but any operations whatsoever using symmetries (eg commutative laws, associative laws and distributive laws, when they indeed hold, are actualy examples of arithmetic operator symmetries) of the process/operators and re-arrange to produce same result while having other advantages. That is it, so simple. Classic examples are Horner's Rule <sup> [13](#r13) </sup>,  Karatsuba Multiplication <sup> [14](#r14) </sup>,  fast complex multiplication <sup> [15](#r15) </sup>, fast matrix multiplication <sup> [18](#r18),  [19](#r19) </sup>,  fast exponentiation <sup> [16](#r16),  [17](#r17) </sup>, fast factorials/binomials <sup> [20](#r20), [21](#r21) </sup>, fast fourier transform <sup> [57](#r57) </sup>, sorting by merging <sup> [25](#r25) </sup>, sorting by powers <sup> [26](#r26) </sup>.
@@ -290,14 +290,14 @@ for (i=0; i<1000; i+=2)
 ```
 
 
-###Databases
+### Databases
 
-####Generalities
+#### Generalities
 
 Database Access can be expensive, this means it is usually better to fetch the needed data using as few DB connections and calls as possible
 
 
-####Methods
+#### Methods
 
 
 * __Lazy Load__ : Avoiding the DB access unless necessary can be efficient, provided that during the application life-cycle there is a frequency of cases where the extra data are not needed or requested
@@ -312,7 +312,7 @@ Database Access can be expensive, this means it is usually better to fetch the n
 * __Exploiting Redundancy__ : Adding more helping hands(DBs) to handle the load instead of just one. In effect this means copying (creating redundancy) of data in multiple places, which can subdivide the total load and handle it independantly
 
 
-###Web
+### Web
 
 * __Minimal Transactions__ : Data over the internet (and generally data over a network), take some time to be transmitted. More so if the data are large, therefore it is best to transmit only the necessary data, and even these in a compact form. That is one reason why `JSON` replaced the verbose `XML` for encoding of arbitrary data on the web.
 
@@ -338,7 +338,7 @@ Database Access can be expensive, this means it is usually better to fetch the n
 
 
 
-###References
+### References
 
 1. <a id="r1" href="http://en.wikipedia.org/wiki/Code_optimization">Code optimization, wikipedia</a>
 2. <a id="r2" href="http://en.wikipedia.org/wiki/Computational_complexity_theory">Computational complexity theory, wikipedia</a>
