@@ -68,7 +68,7 @@ __References:__ [9](#r9), [11](#r11), [12](#r12), [46](#r46), [47](#r47), [48](#
 
 __Data Allocation__
 
-* Disk access is slow
+* Disk access is slow (Network access is even slower)
 * Main Memory access is faster than disk
 * CPU Cache Memory (if exists) is faster than main memory
 * CPU Registers are fastest
@@ -125,7 +125,7 @@ __Arithmetic Operations__
 * __Combining Flow Transfers__ : `IF/THEN` instructions and logic are, in essence, cpu `branch` instructions. Branch instructions involve changing the program `pointer` and going to a new location. This can be slower if many `jump` instructions are used. However re-arranging the `IF/THEN` statements (factorizing common code, using De Morgan's rules for logic simplification etc..) can result in *isomorphic* functionality with fewer and more efficient logic and as a result fewer and more efficient `branch` instructions
 
 
-* __Dead Code Elimination__ : Most times compilers can identify code that is never accessed and remove it from the compiled program. However not all cases can be identified. Using previous simplification schemes, the programmer can more easily identify "dead code" (never accessed) and remove it.
+* __Dead Code Elimination__ : Most times compilers can identify code that is never accessed and remove it from the compiled program. However not all cases can be identified. Using previous simplification schemes, the programmer can more easily identify "dead code" (never accessed) and remove it. An alternative approach to "dead-code elimination" is "live-code inclusion" or "tree-shaking" techniques.
 
 
 * __Common Subexpressions__ : This optimization involves identifying subexpressions which are common in various parts of the code and evaluating them only once and use the value in all subsequent places (sometimes compilers do that).
@@ -140,7 +140,7 @@ __Arithmetic Operations__
 * __Handling Trivial/Special Cases__ : Sometimes a complex computation has some trivial or special cases which can be handled much more efficiently by a reduced/simplified version of the computation (eg computing `a^b`, can handle the special cases for `a,b=0,1,2` by a simpler method). Trivial cases occur with some frequency in applications, so simplified special case code can be quite useful.  <sup> [42](#r42), [43](#r43) </sup> . Similar to this, is the handling of common/frequent computations (depending on application) with fine-tuned or faster code.
 
 
-* __Exploiting Mathematical Theorems/Relations__ : Some times a computation can be performed in an equivalent but more efficient way by using some mathematical theorem, transformation, symmetry <sup> [24](#r24) </sup> or knowledge (eg. Gauss method of solving Systems of Linear equations <sup> [58](#r58) </sup>, Euclidean Algorithm <sup> [71](#r71) </sup> (or both <sup> [72](#r72) </sup>), Fast Fourier Transforms <sup> [57](#r57) </sup>, Fermat's Little Theorem <sup> [59](#r59) </sup>,  Taylor-Mclaurin Series Expasions, Trigonometric Identities <sup> [60](#r60) </sup>, etc..). This can go a long way. It is good to refresh your mathematical knowledge every now and then.
+* __Exploiting Mathematical Theorems/Relations__ : Some times a computation can be performed in an equivalent but more efficient way by using some mathematical theorem, transformation, symmetry <sup> [24](#r24) </sup> or knowledge (eg. Gauss method of solving Systems of Linear equations <sup> [58](#r58) </sup>, Euclidean Algorithm <sup> [71](#r71) </sup>, or both <sup> [72](#r72) </sup>, Fast Fourier Transforms <sup> [57](#r57) </sup>, Fermat's Little Theorem <sup> [59](#r59) </sup>,  Taylor-Mclaurin Series Expasions, Trigonometric Identities <sup> [60](#r60) </sup>, Newton's Method <sup> [73](#r73),[74](#r74) </sup>, etc..). This can go a long way. It is good to refresh your mathematical knowledge every now and then.
 
 
 * __Using Efficient Data Structures__ : Data structures are the counterpart of algorithms (in the space domain), each efficient algorithm needs an associated efficient data structure for the specific task. In many cases using an appropriate data structure (representation) can make all the difference (eg. database designers and search engine developers know this very well) <sup> [36](#r36), [37](#r37), [23](#r23), [62](#r62), [63](#r63), [64](#r64), [65](#r65), [68](#r68), [69](#r69), [70](#r70) </sup> 
@@ -412,3 +412,5 @@ Database Access can be expensive, this means it is usually better to fetch the n
 70. <a id="r70" href="http://www.cs.technion.ac.il/~erez/Papers/wf-methodology-ppopp12.pdf">A Methodology for Creating Fast Wait-Free Data Structures</a>
 71. <a id="r71" href="https://en.wikipedia.org/wiki/Polynomial_greatest_common_divisor#Euclid.27s_algorithm">Euclidean Algorithm</a>
 72. <a id="r72" href="https://en.wikipedia.org/wiki/Gr%C3%B6bner_basis">Gröbner basis</a>
+73. <a id="r73" href="https://en.wikipedia.org/wiki/Newton%27s_method">Newton's Method</a>
+74. <a id="r74" href="https://en.wikipedia.org/wiki/Fast_inverse_square_root">Fast Inverse Square Root</a>
