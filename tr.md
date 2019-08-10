@@ -263,7 +263,7 @@ for (i=0; i<1000; i+=2)
 
 Veritabanı erişimi pahalı olabilir, bu da gerekli veri sayısını mümkün olduğunca az sayıda DB bağlantısı ve çağrı kullanarak almak daha iyi olur.
 
-#### Methods
+#### Yöntemler
 
 - **Tembel Yüklemesi** : Gerekli olmadıkça, DB erişiminden kaçınmak, uygulama ömrü boyunca fazladan veriye ihtiyaç duyulmadığı veya istenmediği durumlarda sıklık olması koşuluyla verimli olabilir
 
