@@ -2,6 +2,10 @@
 
 *A summary of various code optimization methods*
 
+### Translations
+
+* [Turkish](/tr.md) (by [@umutphp](https://github.com/umutphp))
+
 
 ### Contents
 
