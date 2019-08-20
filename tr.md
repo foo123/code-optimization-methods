@@ -2,6 +2,11 @@
 
 *Çeşitli kod optimizasyon yöntemlerinden oluşan derleme*
 
+### Çeviriler
+
+* [Türkçe](/tr.md) ([@umutphp](https://github.com/umutphp) tarafından)
+
+
 ### İçindekiler
 
 - [Genel Prensipler](#general-principles)
